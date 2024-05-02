@@ -48,13 +48,9 @@
     <script>
       let currentZone = '';
 
-      addOverlayListener("CombatData", (combatData) => updateCombatData(combatData));
+      addOverlayListener("CombatData", (combatData) => updateEncounter(combatData));
       addOverlayListener("ChangeZone", (changeZoneData) => updateZone(changeZoneData));
       startOverlayEvents();
-
-      function updateCombatData(data) {
-          updateEncounter(data);
-      }
 
       function updateZone(data) {
           currentZone = data.zoneName;
